@@ -1,24 +1,24 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useCallback, useEffect, useRef } from "react"
 
-const Counter = ({ interval = 100 }) => {
+const Counter = ({ interval = 100, className }) => {
   const inputRef = useRef(null)
 
-  const increment = () => {
+  const increment = useCallback(() => {
     setTimeout(() => {
       inputRef.current.innerHTML++
       increment()
     }, interval)
-  }
+  }, [])
 
   useEffect(() => {
     increment()
   }, [increment])
 
   return (
-    <span className="text-xl font-bold flex justify-between">
-      <span ref={inputRef}>0</span><span className="text-gray-400">HUF</span>
+    <span className={`font-bold flex justify-between ${className}`}>
+      <span ref={inputRef}>0</span><span className="text-gray-400">Ft</span>
     </span>
   )
 }
