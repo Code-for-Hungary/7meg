@@ -2,12 +2,18 @@
 
 import { useCallback, useEffect, useRef } from "react"
 
-const Counter = ({ interval = 100, className }) => {
+const thouseandSeparator = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+}
+
+const Counter = ({ interval = 100, amount = 1, unit="Ft", className }) => {
   const inputRef = useRef(null)
+  const value = useRef(0)
 
   const increment = useCallback(() => {
     setTimeout(() => {
-      inputRef.current.innerHTML++
+      value.current = value.current + parseFloat(amount)
+      inputRef.current.innerHTML = thouseandSeparator(parseInt(value.current))
       increment()
     }, interval)
   }, [])
@@ -18,7 +24,7 @@ const Counter = ({ interval = 100, className }) => {
 
   return (
     <span className={`font-bold flex justify-between ${className}`}>
-      <span ref={inputRef}>0</span><span className="text-gray-400">Ft</span>
+      <span ref={inputRef}>0</span><span className="text-gray-400">{unit}</span>
     </span>
   )
 }

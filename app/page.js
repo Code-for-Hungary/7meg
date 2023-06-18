@@ -1,7 +1,7 @@
 'use client'
 
 import Counter from '@/components/counter'
-import { getInflationInterval, getIntervalFromYearlyAmount } from '@/functions/getIntervals'
+import { HOUR, MILLIARD, SECOND, YEAR, calculateInterval, calculateIntervalAndAmount } from '@/functions/getIntervals'
 import { useState } from 'react'
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
               Ennyit nőtt az Opus global Zrt. adózott eredménye
             </p>
             <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              <Counter interval={getIntervalFromYearlyAmount(22.23*1000*1000*1000)} />
+              <Counter {...calculateIntervalAndAmount(22.23*MILLIARD, YEAR)} />
             </h5>
             <a
               href="#"
@@ -53,7 +53,7 @@ export default function Home() {
               infláció miatt
             </p>
             <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              <Counter interval={getInflationInterval(10000000)} />
+              <Counter interval={calculateInterval(10000000 * 0.215, YEAR)} />
             </h5>
             <a
               href="#"
@@ -62,7 +62,7 @@ export default function Home() {
                 title: 'Infláció',
                 body: (
                   <p>
-                    Az infláció mértéke a KSH adatai szerint 22,5 százalék. Forrás: <a href="" target="_blank" rel="noreferrer">Központi Statisztikai Hivatal</a>
+                    Az infláció mértéke a KSH adatai szerint 22,5 százalék. Forrás: <a className="inline-flex items-center text-blue-600 hover:underline" href="https://ksh.hu" target="_blank" rel="noreferrer">Központi Statisztikai Hivatal</a>
                   </p>
                 )
               })}
@@ -70,6 +70,77 @@ export default function Home() {
               Részletek
             </a>
           </div>
+
+          <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+              Egy átlagos gépkocsi ekkora értékű üzemanyagot fogyasztott el autópályán
+            </p>
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+              <Counter interval={calculateInterval(579 * 7 * 1.3, HOUR)} />
+            </h5>
+            <a
+              href="#"
+              class="inline-flex items-center text-blue-600 hover:underline"
+              onClick={() => setdrawerData({
+                title: 'Benzinár',
+                body: (
+                  <p>
+                    7 literes fogyasztással számolva autópályán 130 kilométeres sebesség és 579&thinsp;Ft-os benzinár mellett. <br /> <br /> Forrás: <a className="inline-flex items-center text-blue-600 hover:underline" href="https://holtankoljak.hu/" target="_blank" rel="noreferrer">holtankoljak.hu</a>
+                  </p>
+                )
+              })}
+            >
+              Részletek
+            </a>
+          </div>
+
+          <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+              Ennyit nőtt a magyar államadósság
+            </p>
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+              <Counter {...calculateIntervalAndAmount(4865*MILLIARD, YEAR)} />
+            </h5>
+            <a
+              href="#"
+              class="inline-flex items-center text-blue-600 hover:underline"
+              onClick={() => setdrawerData({
+                title: 'Államadósság',
+                body: (
+                  <p>
+                    A magyar államadósság 2021 decemberében 40 697 milliárd, míg 2022 decemberében 45 562 milliárd forintra rúgott. <br /> <br /> Forrás: <a className="inline-flex items-center text-blue-600 hover:underline" href="https://hu.wikipedia.org/wiki/Magyarorsz%C3%A1g_%C3%A1llamad%C3%B3ss%C3%A1ga" target="_blank" rel="noreferrer">Wikipedia</a>
+                  </p>
+                )
+              })}
+            >
+              Részletek
+            </a>
+          </div>
+
+          <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+              Ennyi víz folyt le a Dunán Budapestnél
+            </p>
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+              <Counter {...calculateIntervalAndAmount(2350, SECOND)} unit={<span>m<sup>3</sup></span>} />
+            </h5>
+            <a
+              href="#"
+              class="inline-flex items-center text-blue-600 hover:underline"
+              onClick={() => setdrawerData({
+                title: 'Duna',
+                body: (
+                  <p>
+                    A Duna vízhozama Budapestnél 2350 m³/s.
+                     <br /> <br /> Forrás: <a className="inline-flex items-center text-blue-600 hover:underline" href="https://hu.wikipedia.org/wiki/Duna" target="_blank" rel="noreferrer">Wikipedia</a>
+                  </p>
+                )
+              })}
+            >
+              Részletek
+            </a>
+          </div>
+
         </div>
       </div>
 
