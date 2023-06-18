@@ -108,7 +108,7 @@ export default function Home() {
                 title: 'Államadósság',
                 body: (
                   <p>
-                    A magyar államadósság 2021 decemberében 40 697 milliárd, míg 2022 decemberében 45 562 milliárd forintra rúgott. <br /> <br /> Forrás: <a className="inline-flex items-center text-blue-600 hover:underline" href="https://hu.wikipedia.org/wiki/Magyarorsz%C3%A1g_%C3%A1llamad%C3%B3ss%C3%A1ga" target="_blank" rel="noreferrer">Wikipedia</a>
+                    A magyar államadósság 2021 decemberi 40 697 milliárd, és 2022 decemberi 45 562 milliárd forintos összegéből adódó trend figyelembevételével. <br /> <br /> Forrás: <a className="inline-flex items-center text-blue-600 hover:underline" href="https://hu.wikipedia.org/wiki/Magyarorsz%C3%A1g_%C3%A1llamad%C3%B3ss%C3%A1ga" target="_blank" rel="noreferrer">Wikipedia</a>
                   </p>
                 )
               })}
@@ -140,6 +140,30 @@ export default function Home() {
               Részletek
             </a>
           </div>
+
+          <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+              Ennyi működési pénzt használt fel az MTVA
+            </p>
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+              <Counter {...calculateIntervalAndAmount(126.6 * MILLIARD, YEAR)} />
+            </h5>
+            <a
+              href="#"
+              class="inline-flex items-center text-blue-600 hover:underline"
+              onClick={() => setdrawerData({
+                title: 'Közmédia',
+                body: (
+                  <p>
+                    Az MTVA (Médiaszolgáltatás-támogató és Vagyonkezelő Alap) tervezett önálló költségvetése 2023 évre 126,6 milliárd forint.
+                     <br /> <br /> Forrás: <a className="inline-flex items-center text-blue-600 hover:underline" href="https://media1.hu/2022/10/24/1266-milliard-forintbol-gazdalkodhat-jovore-az-mtva/" target="_blank" rel="noreferrer">Media1</a>
+                  </p>
+                )
+              })}
+            >
+              Részletek
+            </a>
+          </div>          
 
         </div>
       </div>
