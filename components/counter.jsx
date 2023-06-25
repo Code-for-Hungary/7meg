@@ -6,7 +6,7 @@ const thouseandSeparator = (number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
 }
 
-const Counter = ({ interval = 100, amount = 1, unit="Ft", className }) => {
+const Counter = ({ interval = 100, amount = 1, unit="Ft", className="flex justify-between" }) => {
   const inputRef = useRef(null)
   const value = useRef(0)
 
@@ -23,7 +23,7 @@ const Counter = ({ interval = 100, amount = 1, unit="Ft", className }) => {
   }, [increment])
 
   return (
-    <span className={`font-bold flex justify-between ${className}`}>
+    <span className={className}>
       <span ref={inputRef}>0</span><span className="text-gray-400">{unit}</span>
     </span>
   )
