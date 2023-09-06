@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <main className="flex min-h-screen flex-col items-center bg-gray-200 dark:bg-gray-600">
         <div className="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
-          <div className="text-sm font-bold tracking-wider text-indigo-600 dark:text-indigo-200 uppercase">
-            Azta hét meg a nyolcát
+          <div className="text-base font-bold tracking-wider text-indigo-600 dark:text-indigo-200 uppercase">
+            Hét meg a nyolcát!
           </div>
           <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
             Amióta nézed ezt az oldalt
