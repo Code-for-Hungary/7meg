@@ -10,18 +10,22 @@ export default function Home() {
     <>
       <main className="flex min-h-screen flex-col items-center bg-gray-200 dark:bg-gray-600">
         <div className="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
-          <div className="text-base font-bold tracking-wider text-indigo-600 dark:text-indigo-200 uppercase">
-            Hét meg a nyolcát!
-          </div>
-          <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            Amióta nézed ezt az oldalt
+          <img src="/7meg_logo.png" alt="7 meg a nyolcat log" />
+        </div>
+        <div className="container top-0 flex flex-col items-center justify-center w-full mx-auto mt-4 text-center xl:px-0">
+          <h2 className="text-cyan-500 dark:text-cyan-20 max-w-2xl text-3xl font-bold leading-snug tracking-tight lg:leading-tight lg:text-4xl ">
+            Hét meg a nyolcát&thinsp;!
           </h2>
-          {/*         <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-          az oldal megnyitása óta
-        </p> */}
+        </div>
+        <div className="container sticky top-0 bg-gray-200 pt-5 pb-5 mb-5 z-10 text-center text-base font-bold tracking-wider0 mt-5 uppercase text-gray-800 dark:text-white">
+          Amióta nézed ezt az oldalt
         </div>
 
-        <div className="flex items-center justify-center w-screen text-gray-800 p-10">
+
+
+
+
+        <div className="flex items-center justify-center w-screen text-gray-800 p-10 pt-2">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 w-full max-w-6xl">
 
             <div className="relative flex flex-col max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -65,7 +69,7 @@ export default function Home() {
                 <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mt-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
               </a>
               <div className="pb-3">
-                <img src="/icons8-money-transfer.gif" className="w-16 h-16 dark:invert" />
+                <img alt="piggy bank" src="/save-money.gif" className="w-16 h-16 dark:invert" />
               </div>
               <p className="mb-3 font-normal text-gray-500 dark:text-gray-200">
                 10 millió forint lekötetlen betét ennyit veszített az értékéből az
@@ -91,7 +95,7 @@ export default function Home() {
                 <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mt-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
               </a>
               <div className="pb-3">
-                <img className="w-16 h-16 dark:invert" src="/icons8-car.gif" />
+                <img alt="car" className="w-16 h-16 dark:invert" src="/car.gif" />
               </div>
               <p className="mb-3 font-normal text-gray-500 dark:text-gray-200">
                 Egy átlagos gépkocsi ekkora értékű üzemanyagot fogyasztott el autópályán
@@ -116,7 +120,7 @@ export default function Home() {
                 <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mt-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
               </a>
               <div className="pb-3">
-                <img className="w-16 h-16 dark:invert" src="/icons8-money.gif" />
+                <img alt="money bag with bomb" className="w-16 h-16 dark:invert" src="/debt.gif" />
               </div>
               <p className="mb-3 font-normal text-gray-500 dark:text-gray-200">
                 Ennyit nőtt a magyar államadósság
@@ -142,7 +146,7 @@ export default function Home() {
                 <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mt-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
               </a>
               <div className="pb-3">
-                <img className="w-16 h-16 dark:invert" src="icons8-cargo-ship.gif" alt="cargo ship" />
+                <img className="w-16 h-16 dark:invert" src="/wave.gif" alt="water waves" />
               </div>
               <p className="mb-3 font-normal text-gray-500 dark:text-gray-200">
                 Ennyi víz folyt le a Dunán Budapestnél
@@ -194,7 +198,7 @@ export default function Home() {
                 <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mt-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
               </a>
               <div className="pb-3">
-                <img src="/icons8-coins.gif" alt="Coins" className="w-16 h-16 dark:invert" />
+                <img src="/money-bag.gif" alt="Coins" className="w-16 h-16 dark:invert" />
               </div>
               <p className="mb-3 font-normal text-gray-500 dark:text-gray-200">
                 Ennyi befagyasztott Európai Uniós pénz érkezett volna Magyarországra
@@ -220,7 +224,7 @@ export default function Home() {
                 <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mt-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
               </a>
               <div className="pb-3">
-                <img src="/icons8-light.gif" alt="Light bubble" className="w-16 h-16 dark:invert" />
+                <img src="/nuclear.gif" alt="nuclear plant" className="w-16 h-16 dark:invert" />
               </div>
               <p className="mb-3 font-normal text-gray-500 dark:text-gray-200">
                 Ennyibe került a Paks-2 atomerőmű-blokk építése
@@ -246,7 +250,7 @@ export default function Home() {
                 <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mt-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
               </a>
               <div className="pb-3">
-                <img src="/icons8-literature.gif" alt="Book" className="w-16 h-16 dark:invert" />
+                <img src="/mortarboard.gif" alt="mortarboard" className="w-16 h-16 dark:invert" />
               </div>
               <p className="mb-3 font-normal text-gray-500 dark:text-gray-200">
                 Ennyi pénzt költöttünk el a felsőoktatás finanszírozására
@@ -267,7 +271,9 @@ export default function Home() {
             </span>
             <div className="flex">
               <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                Az ikonokat az <a target="_blank" href="https://icons8.com">Icons8</a> biztosította.
+                <a href="https://www.flaticon.com/animated-icons" target="_blank" title="animated icons">Animált ikonok: Freepik - Flaticon</a>
+
+                {/*Az ikonokat az <a target="_blank" href="https://icons8.com">Icons8</a> biztosította.*/}
               </span>
             </div>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
@@ -292,7 +298,6 @@ export default function Home() {
       <div
         id="drawer-example"
         className={`transition-transform ${drawerData ? '' : '-translate-x-full'} drop-shadow-md fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800`}
-        tabindex="3"
         aria-labelledby="drawer-label"
       >
         <h5
